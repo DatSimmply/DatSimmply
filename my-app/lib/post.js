@@ -10,8 +10,8 @@ export const getPosts = async limit  => {
     console.log(error);
   }
 };
-export const getPostIds = async () => {
-  const posts = await getPosts();
+export const getPostIds = async limit => {
+  const posts = await getPosts(limit);
   return posts.map((post) => ({
     params: {
       id: `${post.id}`,
