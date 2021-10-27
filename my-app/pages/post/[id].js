@@ -6,12 +6,14 @@ import { getPostIds, getPostById } from "../../lib/post";
 import { useRouter } from "next/dist/client/router";
 const Post = ({ post }) => {
   const router = useRouter();
-  if (router.isFallback){
-    return(
-      <Spinner animation="border" role='status' variant='dark'>
-        <span className='sr-only'>LOADING </span>
-      </Spinner>
-    )
+  if (router.isFallback) {
+    return (
+      <Layout>
+        <Spinner animation="border" role="status" variant="dark">
+          <span className="sr-only">LOADING </span>
+        </Spinner>
+      </Layout>
+    );
   }
 
   return (
@@ -42,7 +44,6 @@ export const getStaticProps = async ({ params }) => {
     props: {
       post,
     },
-   
   };
 };
 
