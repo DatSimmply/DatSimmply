@@ -2,8 +2,8 @@ import { Navbar } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 import Link from "next/link";
 const NavbarMenu = () => (
-  <Navbar bg="dark" variant="dark">
-    <Navbar.Brand>My Next App</Navbar.Brand>
+  <Navbar bg="dark" variant="dark" className="m">
+    <Navbar.Brand className="m-2">My Next App</Navbar.Brand>
     <Nav>
       <Link href="/" passHref>
         <Nav.Link>Home</Nav.Link>

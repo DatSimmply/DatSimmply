@@ -2,14 +2,16 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import Layout from "../../components/Layout";
 import { getPosts } from "../../lib/post";
-import Link from "next/link"
+import Link from "next/link";
 const Posts = ({ posts }) => {
   return (
     <Layout>
       {posts.map((post) => (
         <Card key={post.id}>
-          <Card.Body>
-            <Card.Title>{post.id}. {post.title}</Card.Title>
+          <Card.Body className="my-3 m-2 shadow">
+            <Card.Title>
+              {post.id}. {post.title}
+            </Card.Title>
             <Card.Text>{post.body}</Card.Text>
             <Link href={`/post/${post.id}`} passHref>
               <Card.Link>See more</Card.Link>
