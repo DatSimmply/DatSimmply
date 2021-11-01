@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 import Layout from "../../components/Layout";
 import { getPosts } from "../../lib/post";
 import Link from "next/link";
+
 const Posts = ({ posts }) => {
   return (
     <Layout>
@@ -12,7 +13,7 @@ const Posts = ({ posts }) => {
             <Card.Title>
               {post.id}. {post.title}
             </Card.Title>
-            <Card.Text>{post.body}</Card.Text>
+            <Card.Text> - {post.body}</Card.Text>
             <Link href={`/post/${post.id}`} passHref>
               <Card.Link>See more</Card.Link>
             </Link>
